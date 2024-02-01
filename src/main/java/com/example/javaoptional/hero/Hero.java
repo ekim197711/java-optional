@@ -9,6 +9,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Optional;
+
 @Entity
 @Builder
 @AllArgsConstructor
@@ -22,4 +24,8 @@ public class Hero {
     private Integer power;
     private HeroLifePerspective perspective;
     private String rightHandEquipped;
+
+    public String getName() {
+        return Optional.ofNullable(name).orElse("Name unknown");
+    }
 }
