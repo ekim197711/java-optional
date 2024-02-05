@@ -1,7 +1,6 @@
 package com.example.javaoptional.hero;
 
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +10,7 @@ import java.util.Optional;
 @Mapper(componentModel = "spring")
 public interface HeroMapper {
 
-    @Mapping(source = "rightHandEquipped", target = "rightHandEquipped", qualifiedByName = "wrap")
+    //    @Mapping(source = "rightHandEquipped", target = "rightHandEquipped", qualifiedByName = "wrap")
     HeroDto toDto(Hero hero);
 
     @Named("unwrap")
